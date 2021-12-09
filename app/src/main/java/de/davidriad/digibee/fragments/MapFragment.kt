@@ -21,8 +21,8 @@ class MapFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_map, container, false)
-        tabLayout = view.findViewById(R.id.tab_layout)
-        viewPager = view.findViewById(R.id.viewPager)
+//        tabLayout = view.findViewById(R.id.tab_layout)
+//        viewPager = view.findViewById(R.id.viewPager)
 
 
 //        val exploreActivitesAdapter =

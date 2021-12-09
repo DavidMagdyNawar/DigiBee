@@ -31,14 +31,14 @@ class MainActivity : AppCompatActivity() {
                     .commit()
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_activities -> {
-                val fragment = NotificationFragment()
+            R.id.navigation_map -> {
+                val fragment = MapFragment()
                 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.simpleName)
                     .commit()
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_events -> {
-                val fragment = MapFragment()
+            R.id.navigation_notification -> {
+                val fragment = NotificationFragment()
                 supportFragmentManager.beginTransaction().replace(R.id.container, fragment, fragment.javaClass.simpleName)
                     .commit()
                 return@OnNavigationItemSelectedListener true
