@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
@@ -14,7 +15,7 @@
         <item name="android:statusBarColor">@color/text_color_black</item>
     </style>
 
-    <style name="GreenStatusBar" parent="AppTheme">
+    <style name="ColoredStatusBar" parent="AppTheme">
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:statusBarColor">@color/colorPrimary</item>
     </style>
@@ -23,7 +24,7 @@
         <item name="cornerSize">50%</item>
     </style>
     <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
-        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">36sp</item>
     </style>
 
