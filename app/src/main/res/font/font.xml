@@ -17,4 +17,10 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/sfp_pro_display_semibold" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/oswald_variablefont_wght" />
+
+
 </font-family>
