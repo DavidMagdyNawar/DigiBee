@@ -8,21 +8,19 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.get
 import com.google.android.material.textfield.TextInputLayout
-import de.davidriad.digibee.databinding.ActivityLoginBinding
-import de.davidriad.digibee.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_login.*
+
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_login)
         emailFocusLinstener()
         passwordFocusLinstener()
 
-        binding.loginButton.setOnClickListener { submitForm() }
+        loginButton.setOnClickListener { submitForm() }
     }
 
     private fun submitForm() {
@@ -31,8 +29,8 @@ class LoginActivity : AppCompatActivity() {
         val validPassword = validPassword()
 
         if (validEmail && validPassword)
-            //resetForm()
-                navigateForm()
+        //resetForm()
+            navigateForm()
         else
             invalidForm()
     }
@@ -43,60 +41,60 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun invalidForm() {
-        var message = validEmail().toString() + validPassword().toString()
-        if(binding.emailContainer.helperText != null)
-            message += "\n\nEmail: " + binding.emailContainer.helperText
-        if(binding.emailContainer.helperText != null)
-            message += "\n\nPassword: " + binding.passwordContainer.helperText
+        var message = ""
+        if (emailContainer.helperText != null)
+            message = "Email: " + emailContainer.helperText
+        if (emailContainer.helperText != null)
+            message += "\n\nPassword: Required"
 
         AlertDialog.Builder(this)
             .setTitle("Invalid Form")
             .setMessage(message)
-            .setPositiveButton("okay"){_,_ ->
+            .setPositiveButton("okay") { _, _ ->
                 //do nothing
             }
             .show()
     }
 
     private fun resetForm() {
-        var message = "Email: " + binding.emailEditText.text
-            message += "\nPassword: " + binding.passwordEditText.text
+        var message = "Email: " + emailEditText.text
+        message += "\nPassword: " + passwordEditText.text
 
         AlertDialog.Builder(this)
             .setTitle("Form submitted")
             .setMessage(message)
-            .setPositiveButton("Okay"){_,_ ->
-                binding.emailEditText.text = null
-                binding.passwordEditText.text = null
+            .setPositiveButton("Okay") { _, _ ->
+                emailEditText.text = null
+                passwordEditText.text = null
 
-                binding.emailContainer.helperText = getString(R.string.required)
-                binding.passwordContainer.helperText = getString(R.string.required)
+                emailContainer.helperText = getString(R.string.required)
+                passwordContainer.helperText = getString(R.string.required)
             }
             .show()
     }
 
-    private fun emailFocusLinstener(){
-        binding.emailEditText.setOnFocusChangeListener { _, focused ->
-            if(!focused){
+    private fun emailFocusLinstener() {
+        emailEditText.setOnFocusChangeListener { _, focused ->
+            if (!focused) {
                 //binding.emailContainer.helperText = validEmail()
             }
         }
     }
 
     private fun validEmail(): Boolean {
-        val emailText = binding.emailEditText.text.toString()
+        val emailText = emailEditText.text.toString()
         /*if(!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()){
             return false
         }*/
-        if(emailText == "admin"){
+        if (emailText == "admin") {
             return true
         }
         return false
     }
 
-    private fun passwordFocusLinstener(){
-        binding.passwordEditText.setOnFocusChangeListener { _, focused ->
-            if(!focused){
+    private fun passwordFocusLinstener() {
+        passwordEditText.setOnFocusChangeListener { _, focused ->
+            if (!focused) {
                 //binding.emailContainer.helperText = validPassword()
             }
         }
@@ -104,7 +102,7 @@ class LoginActivity : AppCompatActivity() {
 
     //All of this is using for Sign-Up
     private fun validPassword(): Boolean {
-        val passwordText = binding.passwordEditText.text.toString()
+        val passwordText = passwordEditText.text.toString()
         /*if(passwordText.length < 6){
             return false
         //return "Minimum 8 Character Password"
@@ -125,13 +123,13 @@ class LoginActivity : AppCompatActivity() {
             return false
         //return "Must Contain 1 Special Character (@#\$%^&+=)"
         }*/
-        if(passwordText == "admin"){
+        if (passwordText == "admin") {
             return true
         }
         return false
     }
 
-    fun Signup(v : View){
+    fun Signup(v: View) {
         val intent = Intent(this, SignUpActivity::class.java)
         startActivity(intent)
     }
