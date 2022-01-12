@@ -3,10 +3,7 @@ package de.davidriad.digibee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import de.davidriad.digibee.fragments.NotificationFragment
-import de.davidriad.digibee.fragments.MapFragment
-import de.davidriad.digibee.fragments.HomeFragment
-import de.davidriad.digibee.fragments.ProfileFragment
+import de.davidriad.digibee.fragments.*
 
 class MainActivity : AppCompatActivity() {
 

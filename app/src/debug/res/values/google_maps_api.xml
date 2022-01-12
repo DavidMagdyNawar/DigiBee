@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=B4:80:5B:85:23:D9:BC:2A:78:FF:7F:45:22:86:A3:2C:7F:D3:56:05%3Bde.davidriad.digibee.fragments
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    de.davidriad.digibee.fragments
+
+    SHA-1 certificate fingerprint:
+    B4:80:5B:85:23:D9:BC:2A:78:FF:7F:45:22:86:A3:2C:7F:D3:56:05
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBiIo0XZ1jTP9ZHkjesArnZUbwOjBQ9AkY</string>
+</resources>
