@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "913523329189",
+    "firebase_url": "https://digibee-1cec2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "digibee-1cec2",
+    "storage_bucket": "digibee-1cec2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913523329189:android:eb5eb0ab1572025621254c",
+        "android_client_info": {
+          "package_name": "de.davidriad.digibee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913523329189-mndqonhcm540lr76q4pf4qg076tdn8h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTekTeK6la6lN1pDAcxXrGXKqBQQaTzTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913523329189-mndqonhcm540lr76q4pf4qg076tdn8h1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
